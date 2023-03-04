@@ -1,0 +1,1 @@
+This is a Hello World program build using Cargo. Cargo is Rust's build system (equivalent to CMake). The `Cargo.toml` file contains dfependencies and information on the project. To build this project run `cargo build` in the base directory. This creates a binary `target/debug/hello_cargo`. Alternatively use `cargo run` to build and run the binary in one step.
