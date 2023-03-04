@@ -1,14 +1,15 @@
+// Import timing library and random number generator
 use std::time::Instant;
 use rand::Rng;
 
+// Define a struct to store the results of the search
 pub struct SearchResult {
     pub time: f64,
     pub loop_count: u32,
 }
 
+// Define the linear search algorithm
 pub fn linear_search(n: u32) -> SearchResult {
-    // This is a linear search algorithm
-
     // Initialise loop_count to 0
     let mut loop_count = 0;
     
@@ -25,9 +26,9 @@ pub fn linear_search(n: u32) -> SearchResult {
     let start = Instant::now();
 
     // Loop through the array
-    for i in 0..n {
+    while loop_counter < n {
 
-        // Increment loop_count by 1
+        // Increment loop_count by 1 (must be incremented before testing the condition)
         loop_count += 1;
 
         // If the current element is equal to the target, break out of the loop
@@ -49,9 +50,8 @@ pub fn linear_search(n: u32) -> SearchResult {
     }
 }
 
-pub fn binary_search(n: u32) -> SearchResult {
-    // This is a binary search algorithm
-    
+// Define the binary search algorithm
+pub fn binary_search(n: u32) -> SearchResult {    
     // Initialise loop_count to 0
     let mut loop_count = 0;
 
