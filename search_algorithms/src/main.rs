@@ -63,42 +63,49 @@ fn main() {
         loop_count: 0,
     };
 
+    // Initialise loop counter i to 0
+    let mut i = 0;
+
     // Choose the algorithm based on the user's choice
     if choice == 1 {
-        // Run the algorithm 1000 times
-        for i in 0..1000 {
+        // Run the algorithm 10000 times
+        while i < 10000 {
             // Run the algorithm and store the result in temp
             let temp = search::linear_search(size);
 
             // Add the time taken and the number of loops to the result variable
             result.time += temp.time;
             result.loop_count += temp.loop_count;
+
+            // Increment i
+            i += 1;
         }
-        // Divide the time taken and the number of loops by 1000 to get the average
-        result.time /= 1000.0;
-        result.loop_count /= 1000;
+        // Divide the number of loops by 10000 to get the average
+        result.loop_count /= 10000;
 
         // Print the average time taken and the average number of loops
-        println!("Average time taken: {} seconds", result.time);
+        println!("Total time taken: {} seconds", result.time);
         println!("Average number of loops: {}", result.loop_count);
-        println!("Note: The average time and average number of loops are calculated over 1000 runs.");
+        println!("Note: The average time and average number of loops are calculated over 10000 runs.");
     } else if choice == 2 {
-        // Run the algorithm 1000 times
-        for i in 0..1000 {
+        // Run the algorithm 10000 times
+        while i < 10000 {
             // Run the algorithm and store the result in temp
             let temp = search::binary_search(size);
 
             // Add the time taken and the number of loops to the result variable
             result.time += temp.time;
             result.loop_count += temp.loop_count;
+
+            // Increment i
+            i += 1;
         }
-        // Divide the time taken and the number of loops by 1000 to get the average
-        result.time /= 1000.0;
-        result.loop_count /= 1000;
+        // Divide the number of loops by 10000 to get the average
+        result.loop_count /= 10000;
 
         // Print the average time taken and the average number of loops
-        println!("Average time taken: {} seconds", result.time);
+        println!("Total time taken: {} seconds", result.time);
         println!("Average number of loops: {}", result.loop_count);
-        println!("Note: The average time and average number of loops are calculated over 1000 runs.");
+        println!("Note: The average time and average number of loops are calculated over 10000 runs.");
     }
 }

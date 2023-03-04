@@ -12,9 +12,6 @@ pub struct SearchResult {
 pub fn linear_search(n: u32) -> SearchResult {
     // Initialise loop_count to 0
     let mut loop_count = 0;
-    
-    // Create an integer array of size n
-    let array = vec![1; n as usize];
 
     // Instantiate a random number generator
     let mut rng = rand::thread_rng();
@@ -26,15 +23,15 @@ pub fn linear_search(n: u32) -> SearchResult {
     let start = Instant::now();
 
     // Loop through the array
-    while loop_counter < n {
-
-        // Increment loop_count by 1 (must be incremented before testing the condition)
+    while loop_count < n {
+        // Increment loop_count by 1
         loop_count += 1;
 
-        // If the current element is equal to the target, break out of the loop
-        if array[i as usize] == target {
+        // If the element at index i is equal to the target, break out of the loop
+        if loop_count == target {
             break;
         }
+
     }
 
     // Stop the timer
